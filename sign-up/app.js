@@ -14,6 +14,21 @@ let obj = {
 }
 users.push(obj);
 
-localStorage.setItem("users", JSON.stringify(users))
-
+localStorage.setItem("users", JSON.stringify(users));
+form.reset()
 })
+
+///////////////////////////////////////
+// ders2 davami
+
+let inputs = document.querySelectorAll("input");
+
+inputs.forEach(element => {
+   element.addEventListener("input",()=>{
+     if (element.checkValidity()) {
+        element.nextElementSibling.style.color = "green";
+    } else {
+               element.nextElementSibling.style.color = "red";
+    }
+   })
+});
